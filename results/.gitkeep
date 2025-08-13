@@ -1,1 +1,9 @@
+results_dir = os.path.join(script_dir, "../results")
+os.makedirs(results_dir, exist_ok=True)
+
+summary_file = os.path.join(results_dir, "summary.txt")
+with open(summary_file, "w") as f:
+    f.write("Genome length: " + str(len(genome)) + "\n")
+
+print(f"Results saved to {summary_file}")
 
