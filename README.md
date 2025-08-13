@@ -1,24 +1,30 @@
-# mini-genome-project
-Mini bioinformatics project demonstrating Python genome analysis
-- Folder structure: data, scripts, results
-- Reading a genome FASTA file
-- Analyzing genome length
-- Saving analysis results
-- Python scripting for bioinformatics
-**Steps to run:**
-1. Open GitHub Codespaces or local clone.
-2. Run `python scripts/analyze_genome.py`
-3. Results will be generated in `results/summary.txt`
+# 🧬 Mini Genome Analysis Project
 
-**Skills demonstrated:**
-- Reading FASTA files
-- Computing GC content and nucleotide counts
-- Writing Python scripts
-- Basic bioinformatics workflow
+This is a **bioinformatics demonstration project** showcasing fundamental skills for genome data processing, analysis, and visualization — all in **Python**.
 
-## How to run
+## 📂 Project Structure
+genome_project/
+│
+├── data/ # Input genome data
+│ └── sample_genome.fasta
+│
+├── scripts/ # Python analysis scripts
+│ └── analyze_genome.py
+│
+└── results/ # Output results
+├── summary.txt
+└── base_composition.png
 
-1. Open GitHub Codespaces (or any Python environment)
-2. Open `scripts/analyze_genome.py`
-3. Run the script
-4. Check `results/summary.txt`
+## 🔍 Features Demonstrated
+- Parsing and reading FASTA genome files
+- Computing **genome length**
+- Calculating **GC content**
+- Counting **base composition** (A, T, G, C)
+- Generating **visualization** with Matplotlib
+- Organizing a clean, reproducible bioinformatics project
+
+## 🚀 How to Run
+Inside the `scripts` folder, run:
+
+```bash
+python analyze_genome.py
