@@ -28,3 +28,22 @@ Inside the `scripts` folder, run:
 
 ```bash
 python analyze_genome.py
+
+## 💼 Why I’m a Strong Fit
+As an aspiring bioinformatics professional, I combine:
+- **Solid coding skills** in Python for biological data analysis
+- **Attention to reproducible workflows** with organized project structures
+- **Data visualization abilities** to turn numbers into insights
+- **Git & GitHub** for version control and collaborative work
+
+This project is an example of how I can take raw biological data and turn it into clean, actionable results — a workflow I can quickly adapt to real-world datasets and pipelines.
+
+📊 Example Output
+Summary File (summary.txt):
+Genome length: 23
+GC content: 47.83%
+Base composition:
+A: 6
+T: 6
+G: 6
+C: 5
