@@ -1,30 +1,21 @@
-# analyze_genome.py
-from pathlib import Path
+import os
 
-def gc_content(seq):
-    gc = seq.count('G') + seq.count('C')
-    return round(gc / len(seq) * 100, 2)
+# Define paths relative to this script
+script_dir = os.path.dirname(os.path.abspath(__file__))
+data_file = os.path.join(script_dir, '..', 'data', 'sample_genome.fasta')
+results_dir = os.path.join(script_dir, '..', 'results')
+os.makedirs(results_dir, exist_ok=True)
 
-data_file = Path("../data/sample_genome.fasta")
-results_file = Path("../results/summary.txt")
+# Read genome
+with open(data_file, 'r') as file:
+    genome = ''.join([line.strip() for line in file if not line.startswith('>')])
 
-with open(data_file) as f:
-    lines = [line.strip() for line in f if line.strip()]
+print('Genome data loaded:')
+print(genome)
 
-seqs = {}
-for line in lines:
-    if line.startswith(">"):
-        header = line[1:]
-        seqs[header] = ""
-    else:
-        seqs[header] += line
+# Write summary
+summary_file = os.path.join(results_dir, 'summary.txt')
+with open(summary_file, 'w') as f:
+    f.write('Genome length: ' + str(len(genome)) + '\n')
 
-with open(results_file, "w") as out:
-    for header, seq in seqs.items():
-        out.write(f"Sequence: {header}\n")
-        out.write(f"Length: {len(seq)}\n")
-        out.write(f"GC content: {gc_content(seq)}%\n")
-        out.write(f"A: {seq.count('A')} C: {seq.count('C')} G: {seq.count('G')} T: {seq.count('T')}\n")
-        out.write("-"*30 + "\n")
-
-print("Analysis complete! Check results/summary.txt")
+print(f'Results saved to {summary_file}')
