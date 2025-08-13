@@ -1,0 +1,7 @@
+Genome length: 23
+GC content: 47.83%
+Base composition:
+A: 6
+T: 6
+G: 6
+C: 5
